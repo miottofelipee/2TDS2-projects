@@ -1,3 +1,4 @@
+    const posts = [];
 function savePost(){
     const title = document.getElementById("title").value
     const category = document.getElementById("category").value
@@ -14,3 +15,23 @@ function cleanFields(){
     document.getElementById("author").value  = "";
     document.getElementById("date").value  = "";
 }
+
+if(title && category && resume && author && date){
+    storePost(title, category, resume, author, date)
+}else{
+    alert("Preencha certo!")
+}
+
+function storePost(title, category, resume, author, date){
+    const post ={
+    title,
+    category,
+    resume,
+    author,
+    date
+    };
+    posts.push(post)
+
+    console.log(posts)
+}
+
