@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <title>Posts</title>
-    <script src="/assets/js/script.posts.js"></script>
+
     <link rel="stylesheet" href="../assets/css/style.posts.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -12,34 +15,33 @@
         <h1>Próximos Posts</h1>
         <div id="postForm">
             <div>
-                <label>Titulo</label>
-                <input id="title" type="text" required>
+                <label for="tittle">Título</label>
+                <input type="text" id="tittle" name="tittle" required />
             </div>
-
             <div>
-                <label>Resumo</label>
-                <textarea type="text" id="resume" rows="4" required></textarea>
+                <label for="category">Categoria</label>
+                <input type="text" id="category" name="category" required>
             </div>
-
             <div>
-                <label>Auotor</label>
-                <input id="author" name="author" type="text" required>
+                <label for="resume">Resumo</label>
+                <textarea type="text" id="resume" name="resume" rows="4" required> </textarea>
             </div>
-
             <div>
-                <label for="date">Data</label>
-                <input id="date" name="date" type="date" required>
+                <label for="author">Autor(a)</label>
+                <input type="text" id="author" name="author" required>
             </div>
-
             <div>
-                <label>Categoria</label>
-                <input id="category" name="category" type="text" required>
+                <label for="date">Data de Publicação</label>
+                <input type="date" id="date" name="date" required>
             </div>
-
             <button onclick="savePost()">Cadastrar</button>
+
         </div>
         <div id="list" class="hidden"></div>
+
     </main>
+
+    <script src="../assets/js/script.posts.js"></script>
 </body>
 
 </html>
