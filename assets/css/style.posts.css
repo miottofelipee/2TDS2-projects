@@ -5,7 +5,10 @@
     }
 
     body{
-        background-color: #f0f0f0;
+        background:url(../images/Kalix-Wallpaper.png);
+        background-size: initial;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     h1{
