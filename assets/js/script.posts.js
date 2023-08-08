@@ -38,6 +38,7 @@ function storePost(title, category, resume, author, date) {
 }
 
 function showPosts {
+    document.getElementById("list").classList.remove("hidden");
     let showContent = "";
     posts.forEach((post, index) => {
         showContent += `
@@ -79,4 +80,9 @@ if (tittle && category && resume && author && date) {
             date,
         }
     }
+}
+
+function removePost{
+    posts.splice(index, 1);
+    showPosts();
 }
