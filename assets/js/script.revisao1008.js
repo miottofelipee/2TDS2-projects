@@ -143,24 +143,55 @@ class Witch {
     }
 }
 
-class TypeWitch extends Witch{
-    constructor(name, patron, house, colorEyes, typewitch){
+class TypeWitch extends Witch {
+    constructor(name, patron, house, colorEyes, typewitch) {
         super(name, patron, house, colorEyes,);
         this.typewitch = typewitch;
     }
-    getTypeWitch(){
-            if (this.typewitch === 'p'){
-                return "Este bruxo é sangue puro"
-            }else if(this.typewitch === 'M'){
-                return "Este bruxo é mestiço"
-            }else{
-                return "Este é um trouxa"
-            }
+    getTypeWitch() {
+        if (this.typewitch === 'p') {
+            return "Este bruxo é sangue puro"
+        } else if (this.typewitch === 'M') {
+            return "Este bruxo é mestiço"
+        } else {
+            return "Este é um trouxa"
+        }
     }
 }
 
-const harry = new TypeWitch(`Harry Potter`,`Cervo`,`Grynffidor`,`Verde/Azul`, `M`);
+const harry = new TypeWitch(`Harry Potter`, `Cervo`, `Grynffidor`, `Verde/Azul`, `M`);
 console.log(harry.getTypeWitch());
 
 const witch1 = new Witch(`Harry Potter`, `Dear`, `Grynffidor`, `green`);
 console.log(witch1.getNmae());
+
+class CamaraSecreta {
+    constructor(name, pwd) {
+        this.name = name;
+        let _pwd = pwd; //atributo privado
+
+        this.verifyPwd = (pwdInput) => {
+            return pwdInput == _pwd;
+        };
+
+        this.acessToChamber = () => {
+            let pwdInput = prompt("digite a senha");
+            if (this.verifyPwd(pwdInput)) {
+                console.log(`Bem vindo ${this.name}`)
+            } else {
+                console.log("Acesso negado!");
+            }
+        }
+
+    }
+
+    showName(){
+        console.log(`Nome do bruxo ${this.name}`)
+    }
+}
+
+const myAccess1 = new CamaraSecreta(`Harry Potter`, `senha123`);
+myAccess1.showName();
+myAccess1.name = `HP`;
+myAccess1.pwd = `123`;
+myAccess1.acessToChamber();
