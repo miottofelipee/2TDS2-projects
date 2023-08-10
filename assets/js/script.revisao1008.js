@@ -37,7 +37,7 @@ console.log(personObject);*/
 const user1 = new User(`Felipe`, 16);
 user1.introduce();*/
 
-class Pizza {
+/*class Pizza {
     constructor(base, sauce, toppings, cheese) {
         this.base = base;
         this.sauce = sauce;
@@ -95,4 +95,72 @@ const myPizza = new Pizza(`traditional`, `tomato`, `pepperoni`, `mozzarela`);
 console.log(myPizza.getDescription());
 console.log(`Time to cook the pizza` + myPizza.getTimer());
 let timerPizza = myPizza.getTimer() + myPizza.timerSauce() + myPizza.timerToppings() + myPizza.timerCheese();
-console.log(`Time to cook the pizza` + timerPizza);
+console.log(`Time to cook the pizza` + timerPizza);*/
+
+/*class Calculator {
+    add(a, b) {
+        return a + b;
+    }
+
+    multiply(a, b) {
+        return a * b;
+    }
+
+    subtract(a, b) {
+        return a - b;
+
+    }
+}
+const calculator = new Calculator();
+
+const sumResult = calculator.add(5, 3);
+console.log("Sum", sumResult);
+
+const multiplacationResult = calculator.multiply(4, 2);
+console.log("Multiplication", multiplacationResult);
+
+const subtractionResult = calculator.subtract(10, 4);
+console.log("Subtraction", subtractionResult);*/
+
+class Witch {
+    constructor(name, patron, house, colorEyes) {
+        this.name = name;
+        this.patron = patron;
+        this.house = house;
+        this.colorEyes = colorEyes;
+    }
+
+    getNmae() {
+        return `O nome do(a) bruxo é ${this.name}`;
+    }
+
+    getHouse() {
+        return `Ele(a) está na casa ${this.house}`;
+    }
+
+    getPatron() {
+        return `Seu patrono é ${this.patron}`;
+    }
+}
+
+class TypeWitch extends Witch{
+    constructor(name, patron, house, colorEyes, typewitch){
+        super(name, patron, house, colorEyes,);
+        this.typewitch = typewitch;
+    }
+    getTypeWitch(){
+            if (this.typewitch === 'p'){
+                return "Este bruxo é sangue puro"
+            }else if(this.typewitch === 'M'){
+                return "Este bruxo é mestiço"
+            }else{
+                return "Este é um trouxa"
+            }
+    }
+}
+
+const harry = new TypeWitch(`Harry Potter`,`Cervo`,`Grynffidor`,`Verde/Azul`, `M`);
+console.log(harry.getTypeWitch());
+
+const witch1 = new Witch(`Harry Potter`, `Dear`, `Grynffidor`, `green`);
+console.log(witch1.getNmae());
