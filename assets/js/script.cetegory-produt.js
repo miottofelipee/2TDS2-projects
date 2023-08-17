@@ -28,6 +28,18 @@ class CategoryService {
     }
 }
 
+class productService {
+    constructor(){
+        this.products = [];
+        this.nextProductId = 0;
+    }
+
+    addProduct(name, price, category){
+        const id = this.nextProductId ++;
+        const product = new Product(id, name, price, category);
+    }
+}
+
 const categoryList = new CategoryService();
 
 function createCategory(){
