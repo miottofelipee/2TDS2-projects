@@ -122,7 +122,7 @@ console.log("Multiplication", multiplacationResult);
 const subtractionResult = calculator.subtract(10, 4);
 console.log("Subtraction", subtractionResult);*/
 
-class Witch {
+/*class Witch {
     constructor(name, patron, house, colorEyes) {
         this.name = name;
         this.patron = patron;
@@ -194,4 +194,5 @@ const myAccess1 = new CamaraSecreta(`Harry Potter`, `senha123`);
 myAccess1.showName();
 myAccess1.name = `HP`;
 myAccess1.pwd = `123`;
-myAccess1.acessToChamber();
+myAccess1.acessToChamber();*/
+
