@@ -6,7 +6,7 @@ class Category{
     }
 }
 
-class Products{
+class Product{
     constructor(id, name, price, category){
         this.id = id;
         this.name = name;
@@ -28,7 +28,7 @@ class CategoryService {
     }
 }
 
-class productService {
+class ProductService {
     constructor(){
         this.products = [];
         this.nextProductId = 0;
@@ -37,13 +37,25 @@ class productService {
     addProduct(name, price, category){
         const id = this.nextProductId ++;
         const product = new Product(id, name, price, category);
+        category.products.push(product);
+        this.products.push(product);
     }
 }
 
 const categoryList = new CategoryService();
+const productList = new ProductService();
 
 function createCategory(){
     const categoryName = "Doce";
     categoryList.addCategory(categoryName);
     console.log(categoryList.categories);
+}
+
+function createProduct(){
+    const productNmae = "bolo";
+    const productPrice = 20;
+    const productCtegory = categoryList.categories[0];
+
+    productList.addProduct(productNmae, productPrice, productCtegory);
+    console.log(productList.products);
 }
