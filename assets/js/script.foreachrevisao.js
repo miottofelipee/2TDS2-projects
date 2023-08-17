@@ -79,6 +79,6 @@ function addCarfunction(){
     let modelo = document.getElementById("modelo").value;
     let marca = document.getElementById("marca").value;
     const meuCarro = new Cars(marca, modelo);
-    listadeCarros.addCar(meuCarro)
-    console.log(listadeCarros)
+    listadeCarros.addCar(meuCarro);
+    console.log(listadeCarros);
 }
